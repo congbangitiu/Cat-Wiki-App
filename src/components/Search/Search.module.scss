@@ -1,0 +1,120 @@
+.wrapper {
+    width: 1100px;
+    height: 400px;
+    background-image: url('https://dev-challenges-catwiki.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FHeroImagesm.6c62aad8.png&w=1920&q=75');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.inner {
+    margin-left: 100px;
+    margin-top: -30px;
+    width: 500px;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo p {
+    color: #fff;
+    font-family: Mystery Quest;
+    font-size: 64px;
+}
+
+.logo img {
+    width: 80px;
+    margin-bottom: 40px;
+}
+
+.inner > p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.search {
+    width: 395px;
+    height: 70px;
+    margin-top: 50px;
+    border-radius: 100px;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search input {
+    border: none;
+    outline: none;
+
+    color: #291507;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    width: 395px;
+    min-height: 50px;
+    overflow: auto;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result {
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+
+    &:first-child {
+        margin-top: 10px;
+    }
+
+    &:last-child {
+        margin-bottom: 10px;
+    }
+}
+
+.magnifyingGlass {
+    margin: 0 20px 0 20px;
+    color: #b9bdcf;
+}
+
+.clear {
+    width: 16px;
+    height: 16px;
+    margin-top: 20px;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+    padding: 3px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.noResult {
+    margin-left: 30px;
+}

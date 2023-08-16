@@ -1,0 +1,23 @@
+p,
+strong {
+    margin: 0;
+    font-style: normal;
+    line-height: normal;
+    font-family: Montserrat;
+}
+
+input {
+    font-family: Montserrat;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.Inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
