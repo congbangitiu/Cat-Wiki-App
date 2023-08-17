@@ -11,7 +11,12 @@ function Home() {
     const [searchResults, setSearchResults] = useState([]);
     const [searchValue, setSearchValue] = useState('');
     const [showResult, setShowResult] = useState(false);
-    const [catImageURLs, setCatImageURLs] = useState([]);
+    const [catImages, setCatImages] = useState([]);
+
+    const getRandomSample = (array, size) => {
+        const shuffled = array.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, size);
+    };
 
     useEffect(() => {
         fetch(`https://api.thecatapi.com/v1/breeds`)
@@ -19,13 +24,15 @@ function Home() {
             .then((res) => {
                 setSearchResults(res);
 
-                const imageIDs = res.map((breed) => breed.reference_image_id);
+                const imageIDs = res.map((breed) => breed?.reference_image_id);
+                const randomImageIDs = getRandomSample(imageIDs, 4);
+                console.log(randomImageIDs);
 
-                imageIDs.forEach((imageID) => {
+                randomImageIDs.forEach((imageID) => {
                     fetch(`https://api.thecatapi.com/v1/images/${imageID}`)
                         .then((res) => res.json())
                         .then((res) => {
-                            setCatImageURLs((prevURLs) => [...prevURLs, res.url]);
+                            setCatImages((prev) => [...prev, res]);
                         })
                         .catch((error) => {
                             console.error('Error fetching cat image data:', error);
@@ -48,7 +55,7 @@ function Home() {
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
             />
-            <Breeds searchResults={searchResults} catImageURLs={catImageURLs} />
+            <Breeds searchResults={searchResults} catImages={catImages} />
             <CatBenefits />
             <Footer />
         </div>

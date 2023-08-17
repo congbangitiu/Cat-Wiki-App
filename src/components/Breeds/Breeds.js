@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function Breeds({ searchResults, catImageURLs }) {
+function Breeds({ searchResults, catImages }) {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -18,13 +18,10 @@ function Breeds({ searchResults, catImageURLs }) {
                 </Link>
                 {searchResults?.length > 0 && (
                     <div className={cx('photos')}>
-                        {searchResults.slice(0, 4).map((breed, index) => (
+                        {catImages.slice(0, 4).map((cat) => (
                             <div className={cx('photo')}>
-                                <img
-                                    src={catImageURLs[index]}
-                                    alt="cat"
-                                />
-                                <p className={cx('name')}>{breed?.name}</p>
+                                <img src={cat?.url} alt="cat" />
+                                <p className={cx('name')}>{cat?.breeds?.[0].name}</p>
                             </div>
                         ))}
                     </div>

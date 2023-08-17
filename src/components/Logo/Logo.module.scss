@@ -6,3 +6,22 @@ img {
     width: 200px;
     margin: 20px 0 20px 0;
 }
+
+
+/* RESPONSIVE */
+//Tablet
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .wrapper {
+       
+    }
+}
+// Mobile
+@media (max-width: 46.1875em) {
+    .wrapper {
+        margin-top: 20px;
+        width: 800px;
+    }
+    img {
+        width: 250px;
+    }
+}

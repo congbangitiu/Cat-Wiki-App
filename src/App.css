@@ -21,3 +21,15 @@ a {
     align-items: center;
     margin-bottom: 150px;
 }
+
+/* RESPONSIVE */
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+/* Mobile */
+@media (max-width: 46.1875em) {
+    .Inner {
+        width: 46.25em;
+        margin-left: 20%;
+    }
+}
