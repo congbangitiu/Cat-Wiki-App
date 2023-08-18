@@ -16,7 +16,7 @@ function Footer() {
                 <div className={cx('copyright')}>
                     <p className={cx('icon')}>©</p>
                     <p className={cx('text')}>
-                        created by <p> Cong Bang </p> - devChallenge.io 2023
+                        created by <p> Cong Bang </p> <p>- devChallenge.io 2023</p>
                     </p>
                 </div>
             </div>

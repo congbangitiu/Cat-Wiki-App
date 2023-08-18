@@ -24,12 +24,10 @@ a {
 
 /* RESPONSIVE */
 /* Tablet */
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
+@media (min-width: 641px) and (max-width: 960px) {
 }
 /* Mobile */
-@media (max-width: 46.1875em) {
+@media (max-width: 640px) {
     .Inner {
-        width: 46.25em;
-        margin-left: 20%;
     }
 }

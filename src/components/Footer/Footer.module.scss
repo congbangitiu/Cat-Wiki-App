@@ -55,9 +55,48 @@
     color: #fff;
 }
 
-.text p {
+.text p:first-child {
     color: #fff;
     font-size: 18px;
     font-weight: 700;
     text-decoration-line: underline;
+}
+
+/* RESPONSIVE */
+//Tablet
+@media (min-width: 641px) and (max-width: 960px) {
+}
+// Mobile
+@media (max-width: 640px) {
+    .wrapper {
+        width: 90%;
+        height: 50px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    .logo {
+        width: 20%;
+        gap: 10px;
+    }
+    .logo p {
+        font-size: 15px;
+    }
+    .logo img {
+        width: 25px;
+    }
+    .copyright {
+        width: 50%;
+    }
+    .icon {
+        font-size: 15px;
+    }
+    .text {
+        font-size: 10px;
+    }
+    .text p:first-child {
+        font-size: 10px;
+    }
+    .text p:last-child {
+        display: none;
+    }
 }

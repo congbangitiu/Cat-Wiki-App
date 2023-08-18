@@ -26,7 +26,6 @@ function Home() {
 
                 const imageIDs = res.map((breed) => breed?.reference_image_id);
                 const randomImageIDs = getRandomSample(imageIDs, 4);
-                console.log(randomImageIDs);
 
                 randomImageIDs.forEach((imageID) => {
                     fetch(`https://api.thecatapi.com/v1/images/${imageID}`)

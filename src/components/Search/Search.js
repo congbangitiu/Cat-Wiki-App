@@ -5,7 +5,7 @@ import whiteLogo from '../../images/white_logo.png';
 import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useDebounce } from '../../hooks';
 
 const cx = classNames.bind(styles);
@@ -45,6 +45,25 @@ function Search({ searchResults, setSearchResults, showResult, setShowResult, se
         setIsSearching(false);
         inputRef.current.focus();
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 640) {
+                setDisplayedResults(displayedResults.slice(0, 4));
+                inputRef.current.placeholder = 'Search';
+            } else {
+                inputRef.current.placeholder = 'Enter your breed';
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [displayedResults]);
 
     return (
         <div className={cx('wrapper')}>

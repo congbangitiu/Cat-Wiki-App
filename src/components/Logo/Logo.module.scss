@@ -10,18 +10,17 @@ img {
 
 /* RESPONSIVE */
 //Tablet
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
+@media (min-width: 641px) and (max-width: 960px) {
     .wrapper {
        
     }
 }
 // Mobile
-@media (max-width: 46.1875em) {
+@media (max-width: 640px) {
     .wrapper {
-        margin-top: 20px;
-        width: 800px;
+        width: 90%;
     }
     img {
-        width: 250px;
+        width: 120px;
     }
 }

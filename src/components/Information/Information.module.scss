@@ -221,3 +221,55 @@
         transform: scale(1.05);
     }
 }
+
+
+/* RESPONSIVE */
+//Tablet
+@media (min-width: 641px) and (max-width: 960px) {
+}
+// Mobile
+@media (max-width: 640px) {
+    .wrapper {
+        width: 90%;
+    }
+    .illustration {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .pad {
+        display: none;
+    }
+    .name {
+        text-align: center;
+        font-size: 30px;
+    }
+    .description {
+        font-size: 15px;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .indicator {
+        width: 100%;
+    }
+    .indicator strong {
+        font-size: 15px;
+    }
+    .bar {
+        width: 25px;
+        height: 10px;
+    }
+    .otherPhotos p {
+        font-size: 30px;
+    }
+    .photos {
+        grid-template-columns: auto auto ;
+        justify-content: center;
+        gap: 20px 20px;
+    }
+    .photo img {
+        width: 160px;
+        height: 160px;
+        border-radius: 20px;
+    }
+}
