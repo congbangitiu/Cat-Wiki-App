@@ -126,7 +126,8 @@
     text-decoration: none;
 
     &:hover p,
-    &:hover .icon, &:active .icon {
+    &:hover .icon,
+    &:active .icon {
         text-decoration: underline rgba(41, 21, 7, 0.6);
         cursor: pointer;
     }
@@ -142,6 +143,44 @@
     width: 18px;
     height: 18px;
     color: rgba(41, 21, 7, 0.6);
+}
+
+.backToTopButton {
+    position: fixed;
+    bottom: 50px;
+    right: 70px;
+    background-color: #ddd8d8;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    margin-bottom: 10px;
+}
+
+.backToTopButton:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext {
+    width: 80px;
+    display: block;
+    text-align: center;
 }
 
 /* RESPONSIVE */
@@ -190,5 +229,16 @@
     .icon {
         width: 12px;
         height: 12px;
+    }
+    .backToTopButton {
+        bottom: 90px;
+        right: 30px;
+    }
+    .backToTopButton svg {
+        width: 25px;
+        height: 25px;
+    }
+    .tooltip {
+        display: none;
     }
 }
